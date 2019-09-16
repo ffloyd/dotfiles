@@ -1,0 +1,52 @@
+# -*- mode: sh -*-
+
+#
+# locale
+#
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+#
+# app inits
+#
+eval "$(rbenv init -)"
+
+#
+# zplug
+#
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "lib/completion", from:oh-my-zsh
+zplug "lib/history", from:oh-my-zsh
+zplug "lib/key-bindings", from:oh-my-zsh
+zplug "lib/termsupport", from:oh-my-zsh
+
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/battery", from:oh-my-zsh
+zplug "plugins/bundler", from:oh-my-zsh
+zplug "plugins/bgnotify", from:oh-my-zsh
+zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/extract", from:oh-my-zsh
+zplug "plugins/npm", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/rbenv", from:oh-my-zsh
+zplug "plugins/mix", from:oh-my-zsh
+
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting"
+
+zplug "denysdovhan/spaceship-zsh-theme", as:theme
+
+if ! zplug check; then
+  zplug install
+fi
+
+zplug load
+
+#
+# aliases
+#
+alias l='exa -lFh'
+alias la='exa -lFha'

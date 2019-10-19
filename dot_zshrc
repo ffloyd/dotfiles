@@ -12,6 +12,11 @@ export LANG=en_US.UTF-8
 eval "$(rbenv init -)"
 
 #
+# ENV-driven configs
+#
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+#
 # zplug
 #
 export ZPLUG_HOME=/usr/local/opt/zplug

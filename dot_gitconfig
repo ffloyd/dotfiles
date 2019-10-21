@@ -1,6 +1,0 @@
-[user] 
-  name = Roman Kolesnev
-  email = rvkolesnev@gmail.com
-  signingkey = 019D8379
-[commit]
-  gpgsign = true

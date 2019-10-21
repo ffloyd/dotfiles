@@ -1,0 +1,9 @@
+# -*- mode: toml -*-
+[user]
+  name = Roman Kolesnev
+  email = {{ .email }}
+{{- if eq .chezmoi.hostname "ffloyd-personal" }}
+  signingkey = 019D8379
+[commit]
+  gpgsign = true
+{{- end }}

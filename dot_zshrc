@@ -11,6 +11,9 @@ export LANG=en_US.UTF-8
 #
 eval "$(rbenv init -)"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+
 #
 # ENV-driven configs
 #
@@ -35,6 +38,7 @@ zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
+zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
 zplug "plugins/mix", from:oh-my-zsh

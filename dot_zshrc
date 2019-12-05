@@ -18,6 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 # ENV-driven configs
 #
 export HOMEBREW_NO_AUTO_UPDATE=1
+export LEDGER_FILE="$HOME/Documents/accounting.journal"
 
 #
 # zplug

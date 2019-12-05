@@ -10,6 +10,7 @@ brew "elixir"
 brew "exa"
 brew "git"
 brew "haskell-stack"
+brew "hledger"
 brew "mas"
 brew "node"
 brew "postgresql", restart_service: true

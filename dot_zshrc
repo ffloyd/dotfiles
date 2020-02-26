@@ -18,7 +18,8 @@ export NVM_DIR="$HOME/.nvm"
 # ENV-driven configs
 #
 export HOMEBREW_NO_AUTO_UPDATE=1
-export LEDGER_FILE="$HOME/Documents/accounting.journal"
+export LEDGER_FILE="$HOME/Documents/2020.journal"
+export EDITOR="nvim"
 
 #
 # zplug

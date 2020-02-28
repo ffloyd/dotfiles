@@ -24,6 +24,8 @@ brew "git"
 brew "go"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# GitHub Markdown previewer
+brew "grip"
 # The Haskell Tool Stack
 brew "haskell-stack"
 # Command-line accounting tool
@@ -34,6 +36,8 @@ brew "mas"
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Object-relational database system
 brew "postgresql", restart_service: true
 # Ruby version manager

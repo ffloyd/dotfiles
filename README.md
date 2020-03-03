@@ -29,6 +29,26 @@ Installation on a clean system:
 1. Install the software: `cd && brew bundle --verbose` (TODO: use a global
    .Brewfile and `--global` CLI flag).
 1. Initialize 1Password.
-1. Set Brave as a default browser, add to Brave Sync Chain and integrate 1Password.
-
+1. Set Brave as a default browser, add to Brave Sync Chain and integrate 1PasswordX.
+1. Configure iTerm2 (set as default shell, configure theming).
+1. Setup internet accounts, Mail.app and Calendar.
 1. Initialize Dash if you've bought it and have a licence.
+
+Setup DOOM:
+
+``` sh
+cd
+ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications
+git clone git@github.com:hlissner/doom-emacs.git ~/.emacs.d/
+doom install
+doom sync
+doom doctor
+```
+
+
+Setup NeoVim/VimPlug:
+
+``` sh
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```

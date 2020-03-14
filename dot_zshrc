@@ -66,3 +66,48 @@ zplug load
 alias l='exa -lFh'
 alias la='exa -lFha'
 alias vim=nvim
+
+#
+# functions
+#
+function my-git-keygen {
+  if [[ $# != 2 ]]; then
+    echo "Invalid argument count."
+    echo "Usage: my-git-keygen [NAME] [EMAIL]"
+    return -1
+  fi
+
+  NAME=$1
+  EMAIL=$2
+
+  ssh-keygen -t rsa -b 4096 -C $EMAIL -f "${HOME}/.ssh/id_rsa.${NAME}"
+  cat "${HOME}/.ssh/id_rsa.${NAME}.pub" | pbcopy
+  echo "Public key is copied to clipboard."
+}
+
+function mode {
+  MODE_FILE=$HOME/.mode
+
+  if [[ $# != 1 ]]; then
+    echo "Usage: mode [MODE]"
+    echo "Current mode: `cat $MODE_FILE`"
+    return 0
+  fi
+
+  MODE=$1
+
+  cp $HOME/.ssh/id_rsa.$MODE $HOME/.ssh/id_rsa
+  cp $HOME/.ssh/id_rsa.$MODE.pub $HOME/.ssh/id_rsa.pub
+  cp $HOME/.gitconfig.$MODE $HOME/.gitconfig
+
+  rm -f $MODE_FILE
+  echo $MODE >> $MODE_FILE
+
+  echo "MODE: $MODE"
+}
+
+compdef _mode mode
+function _mode {
+  _arguments -C \
+    "1: :(ffloyd vineti)"
+}

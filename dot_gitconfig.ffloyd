@@ -1,0 +1,6 @@
+# -*- mode: toml -*-
+[user]
+  name = Roman Kolesnev
+  email = rvkolesnev@gmail.com
+[core]
+  excludesfile = ~/.gitignore_global

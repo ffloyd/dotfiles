@@ -44,6 +44,8 @@ brew "postgresql", restart_service: true
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
 # Internet file retriever
@@ -59,20 +61,21 @@ brew "d12frosted/emacs-plus/emacs-plus", args: ["without-spacemacs-icon"]
 # Manage your dotfiles across multiple machines, securely.
 brew "twpayne/taps/chezmoi"
 cask "1password"
+cask "ableton-live"
+cask "bitbar"
 cask "brave-browser"
-cask "brewservicesmenubar"
 cask "caffeine"
 cask "dash"
 cask "deezer"
 cask "docker"
-cask "font-firacode-nerd-font"
-cask "font-iosevka-nerd-font"
+cask "font-cascadia-pl"
 cask "gog-galaxy"
 cask "google-chrome"
 cask "gpg-suite"
 cask "iterm2"
 cask "java"
 cask "postico"
+cask "postman"
 cask "skype"
 cask "slack"
 cask "telegram"
@@ -80,8 +83,9 @@ cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoomus"
-mas "Debit & Credit", id: 882637653
-mas "Logic Pro X", id: 634148309
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Things", id: 904280696

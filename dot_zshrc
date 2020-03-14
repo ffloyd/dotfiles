@@ -16,6 +16,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:$HOME/.emacs.d/bin"
 
+export PATH="/usr/local/sbin:$PATH"
+
 #
 # ENV-driven configs
 #
